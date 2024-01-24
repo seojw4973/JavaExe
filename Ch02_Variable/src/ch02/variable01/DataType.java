@@ -9,7 +9,7 @@ public class DataType {
 		String name = "홍길동";	// 문자열
 		boolean isRun = true;	// true/false
 		String str = "a";		// 문자열
-		String name1 = "홍길동";
+		String name1 = "Albert";
 		
 		System.out.println(num);
 		num = 999;
