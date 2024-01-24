@@ -11,7 +11,5 @@ public class ArithOP {
 		System.out.println(num0*num1);
 		System.out.println(num0/num1);	// 몫
 		System.out.println(num0%num1);	// 나머지
-		
-		
 	}
 }
