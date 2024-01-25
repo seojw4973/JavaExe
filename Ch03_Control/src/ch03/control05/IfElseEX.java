@@ -13,7 +13,7 @@ public class IfElseEX {
 		
 		Scanner sc = new Scanner(System.in);
 		int sel = sc.nextInt();
-//		switch문을 if문으로 전환
+		//	switch문을 ifelse문으로 전환
 		
 		if(sel == 1)
 			System.out.println("짜장면이 나왔습니다.");
