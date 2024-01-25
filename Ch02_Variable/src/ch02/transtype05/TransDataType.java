@@ -16,6 +16,9 @@ public class TransDataType {
 		 */
 		avg = (double)total/stNum;	// total, stNum 둘 중 어디든 (double)를 붙이면 정수를 실수로 자동변환 가능
 		System.out.println("평균은 " + avg + "입니다.");
+		
+		int nAvg = (int)avg;
+		System.out.println("평균은 " + nAvg + "입니다.");
 	}
 
 }
