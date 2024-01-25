@@ -4,9 +4,9 @@ public class DataType {
 	public static void main(String[] args) {
 		// 자료형 변수공간이름 = 값
 		int num = 100;			// 정수
-		double dnum = 3.14;		// 실수
-		char ch = 'a';			// 문자 1글자
-		String name = "홍길동";	// 문자열
+		double dnum = 3.14;		// 실수 (소수점까지 포함)
+		char ch = 'a';			// 문자 1글자('' 사용)
+		String name = "홍길동";	// 문자열("" 사용)
 		boolean isRun = true;	// true/false
 		String str = "a";		// 문자열
 		String name1 = "Albert";

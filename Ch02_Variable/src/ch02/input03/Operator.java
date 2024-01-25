@@ -10,7 +10,7 @@ public class Operator {
 		// 라이브러리(jdk를 포함한)에 존재하는 클래스는
 		// Ctrl + Shift + o를 누르면 자동으로
 		// package 경로를 등록해준다
-		// jdk에 있는 클래스이고 키보드 입력을 받을 때 사용한다.
+		// system.in은 jdk에 있는 클래스이고 키보드 입력을 받을 때 사용한다.
 		Scanner sc = new Scanner(System.in);
 		
 		System.out.println("더하기 연산을 합니다");
