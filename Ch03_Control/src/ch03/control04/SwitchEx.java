@@ -31,7 +31,7 @@ public class SwitchEx {
 		case 5:
 			System.out.println("유린기가 나왔습니다.");
 			break;
-		default:
+		default:	// else의 의미
 			System.out.println("해당 메뉴 번호가 없습니다.");
 			break;
 			
