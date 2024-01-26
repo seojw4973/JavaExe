@@ -5,6 +5,9 @@ public class PrimitiveTypeEx {
 		// 아래 변수는 Stack에 생성되었다가
 		// main의 영역을 벗어나면 Stack에서 사라진다.
 		// 지역변수
+		// Stack : 바로 사용, 끝나면 해제
+		// 힙 : 스택보다 훨씬 크고, 큰 데이터 보관, 상대적으로 오래 보관
+		// 코드 : 실행, method
 		
 		byte b = 10;
 		char ch = 'A';
