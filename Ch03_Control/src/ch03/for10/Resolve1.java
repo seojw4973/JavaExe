@@ -49,6 +49,17 @@ public class Resolve1 {
 		System.out.println("10원 " + n10 + "개");
 		System.out.println("1원 " + n1 + "개");
 		
+//		System.out.printf("오만원 : %d/n"
+//				+ "만원 : %d/n"
+//				+ "오천원 : %d/n"
+//				+ "천원 : %d/n"
+//				+ "오백원 : %d/n"
+//				+ "백원 : %d/n"
+//				+ "오십원 : %d/n"
+//				+ "십원 : %d/n"
+//				+ "1원 : %d/n"
+//				n50000, n10000, n5000, n1000, n500, n100, n50, n10, n1
+		
 		
 		sc.close();
 	}
