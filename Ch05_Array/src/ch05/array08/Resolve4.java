@@ -29,7 +29,7 @@ public class Resolve4 {
 	}
 
 }
-//	public static void method0() {
+//	public static void method1() {
 //		int [] numArr = new int[10000];
 //		
 //		for(int i = 0;i<numArr.length;i++) {
