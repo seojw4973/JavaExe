@@ -1,11 +1,12 @@
 package ch03.while08;
 
+// while문을 이용해서 1부터 10까지 합을 출력하세요
 public class Resolve3 {
 
 	public static void main(String[] args) {
 		int sum = 0;
 		//i=1일경우, 출력 후 i++, 조건은 i <= 10 
-		int i=0;
+		int i=1;
 		while(i<=10) {
 		 sum += i;
 		 i++;

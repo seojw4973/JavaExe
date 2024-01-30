@@ -1,5 +1,6 @@
 package ch05.array08;
-
+// 정수 배열 5개를 할당하고
+// Arrays.sort를 활용해서 최솟값과 최댓값을 얻으세요
 import java.util.Arrays;
 
 public class Resolve1 {
