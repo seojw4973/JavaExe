@@ -1,9 +1,9 @@
-package ch08.class09.answer01;
+package ch08.class09.answer05;
 
-public class RectangleMain {
+public class Resolve5RectangleMain {
 	public static void main(String[] args) {
-		Rectangle r = new Rectangle();
-		Rectangle s = new Rectangle(2, 3, 4, 5);
+		Resolve5Rectangle r = new Resolve5Rectangle();
+		Resolve5Rectangle s = new Resolve5Rectangle(2, 3, 4, 5);
 		
 		
 		r.show();

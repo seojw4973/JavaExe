@@ -2,8 +2,14 @@ package ch09.Resolve07;
 
 import java.util.Scanner;
 
+import ch09.Resolve07.answer01.Add;
+import ch09.Resolve07.answer01.Div;
+import ch09.Resolve07.answer01.Mul;
+import ch09.Resolve07.answer01.Sub;
 
-/*1. 클래스 Add
+
+/*
+1. 클래스 Add
    클래스 Sub
    클래스 Mul
    클래스 Div을 만드세요
@@ -79,7 +85,9 @@ public class QuestionClass {
 			+ "     1차 놀이에서 어린이1은 어린이2의 구슬 2개를 획득한다\r\n"
 			+ "     2차 놀이에서 어린이2는 어린이 1의 구슬 7개를 획득한다\r\n"
 			+ "     마지막으로 각각의 어린이가 보유하고 있는 구슬의 수를 출력한다\r\n"
-			+ "     프로그램을 종료한다.";
+			+ "     프로그램을 종료한다.\r\n"
+			+ "6. 프로그램을 종료한다.\r\n"
+			+ "";
 	
 	System.out.println("\n\n\n------------------------------------");
 	System.out.println(menuStr);
@@ -100,7 +108,20 @@ public static int getSelectMenu(Scanner sc) {
 
 // 1번 문제에 대한 풀이
 public static void answer1(Scanner sc) {
+	Add add = new Add();
+	Div div = new Div();
+	Mul mul = new Mul();
+	Sub sub = new Sub();
+	
+	add.setValue(100, 20);
+	sub.setValue(100, 20);
+	mul.setValue(100, 20);
+	div.setValue(100, 20);
 
+	System.out.println("add.calculate()= " + add.calaulate());
+	System.out.println("sub.calculate()= " + sub.calaulate());
+	System.out.println("mul.calculate()= " + mul.calaulate());
+	System.out.println("div.calculate()= " + div.calaulate());
 }
 
 // 2번 문제에 대한 풀이
@@ -156,11 +177,14 @@ public static void main(String[] args) {
 			break;
 		case 6:
 			isRun = false;				// 6번 탈출
+			System.out.println("프로그램 종료");
 			break;
 		default:
 			System.out.println("번호를 잘 못 입력했습니다.");
 			break;
-		}			
+		}		
+		sc.nextLine();
+		sc.nextLine();
 	}
 
 	System.out.println("Program End~");

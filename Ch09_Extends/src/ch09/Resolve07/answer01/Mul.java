@@ -1,9 +1,9 @@
-package ch09.Resolve07;
+package ch09.Resolve07.answer01;
 
-public class Resolve1Mul {
+public class Mul {
 	private int a, b;
 	
-	void setValue(int _a, int _b) {
+	public void setValue(int _a, int _b) {
 		a = _a;
 		b = _b;
 	}

@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 import ch08.class09.answer01.Reslove1Buyer;
 import ch08.class09.answer01.Resolve1Seller;
-import ch08.class09.answer02.Resolve2;
+import ch08.class09.answer02.Chineseresturant;
 import ch08.class09.answer03.Resolve3Buyer;
 import ch08.class09.answer04.Song;
 import ch08.class09.answer05.Rectangle;
@@ -122,12 +122,14 @@ public static void answer1(Scanner sc) {
 
 // 2번 문제에 대한 풀이
 public static void answer2(Scanner sc) {
-	Resolve2 resl = new Resolve2();
-	System.out.println("홍콩반점에 오신걸 환영합니다~");
-	resl.viewMenu();
-	resl.selectMenu();
-	resl.deliveryMenu();
-	resl.keyboardEnd();
+	Chineseresturant rest = 
+			new Chineseresturant(sc, "천안문",
+				new String[] {"짜장면", "짬뽕", "탕수육", "라조기", "유산슬", "유린기"});
+				
+	rest.viewMenu();
+	rest.selectFood();
+	rest.deliveryFood();
+			
 }
 
 // 3번 문제에 대한 풀이
