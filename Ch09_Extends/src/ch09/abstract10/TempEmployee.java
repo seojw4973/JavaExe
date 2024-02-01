@@ -22,9 +22,9 @@ public class TempEmployee extends Employee {
 	@Override
 	public void showEmployeeInfo() {
 		super.showEmployeeInfo();
-		System.out.println("yearSalary : " + yearSalary);
-		System.out.println("hireYear : " + hireYear);
-		System.out.println("monthPay : " + getMonthPay());
+		System.out.println("연봉 : " + yearSalary);
+		System.out.println("계약기간 : " + hireYear);
+		System.out.println("월급 : " + getMonthPay());
 	}
 	
 

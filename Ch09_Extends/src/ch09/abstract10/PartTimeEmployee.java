@@ -22,9 +22,9 @@ public class PartTimeEmployee extends Employee {
 	@Override
 	public void showEmployeeInfo() {
 		super.showEmployeeInfo();
-		System.out.println("daliyPay : " + daliyPay);
-		System.out.println("workDay : " + workDay);
-		System.out.println("monthPay : " + getMonthPay());
+		System.out.println("일당 : " + daliyPay);
+		System.out.println("일한 일수 : " + workDay);
+		System.out.println("월급 : " + getMonthPay());
 	}
 	
 
