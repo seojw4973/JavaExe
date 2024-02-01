@@ -1,11 +1,15 @@
 package ch09.Resolve07;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 import ch09.Resolve07.answer01.Add;
 import ch09.Resolve07.answer01.Div;
 import ch09.Resolve07.answer01.Mul;
 import ch09.Resolve07.answer01.Sub;
+import ch09.Resolve07.answer02.Triangle;
+import ch09.Resolve07.answer03.ArrayUtility;
+import ch09.Resolve07.answer05.Child;
 
 
 /*
@@ -126,22 +130,54 @@ public static void answer1(Scanner sc) {
 
 // 2번 문제에 대한 풀이
 public static void answer2(Scanner sc) {
-
+	Triangle t = new Triangle(4, 5);
+	System.out.printf("밑변이 %d, 높이가 %d인 삼각형의 넓이는 %d\n", 4, 5, t.square());
+	t.show();
+	t.trans(7, 12);
+	t.show();
+	
 }
 
 // 3번 문제에 대한 풀이
 public static void answer3(Scanner sc) {
-
+	int[] intArr = new int[] {31, 11, 9, 99, 2};
+	double[] dArr = ArrayUtility.intToDouble(intArr);
+	System.out.println(Arrays.toString(intArr));
+	System.out.println(Arrays.toString(dArr));
+	
+	double[] dArr1 = new double[] {2.1, 3.4, 5.5, 7.9, 1.2};
+	int [] intArr1 = ArrayUtility.doubleToInt(dArr1);
+	System.out.println(Arrays.toString(dArr1));
+	System.out.println(Arrays.toString(intArr1));
 }
 
 // 4번 문제에 대한 풀이
 public static void answer4(Scanner sc) {
-
+	int[] a = new int[] {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+	int[] b = new int[] {5, 9, 7, 3, 11, 12, 15};
+	int[] c = new int[] {20, 21, 22};
+	
+	int [] result = ArrayUtility2.concat(a, c);
+	System.out.println(Arrays.toString(result));
+	
+	int [] result1 = ArrayUtility2.remove(a, b);
+	System.out.println(Arrays.toString(result1));
+	
+	int [] result2 = ArrayUtility2.remove(a, c);
+	System.out.println(Arrays.toString(result2));
 }
 
 // 5번 문제에 대한 풀이
 public static void answer5(Scanner sc) {
-
+	Child alex = new Child(15);
+	Child james = new Child(9);
+	
+	alex.get(james, 2);
+	james.get(alex, 7);
+	
+	System.out.println("alex의 구슬 갯수 : " + alex.getBallCnt());
+	System.out.println("james의 구슬 갯수 : " + james.getBallCnt());
+		
 }
 
 // 전체의 시작인 main 메서드
