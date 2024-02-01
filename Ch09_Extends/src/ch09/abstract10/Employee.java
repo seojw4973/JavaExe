@@ -1,5 +1,9 @@
 package ch09.abstract10;
 
+/* 다형성(Polymorphism)
+ * 1) 부모 클래스에 자식 객체를 담을 수 있다. (묶어서 관리)
+ * 2) 부모 클래스 변수로 메서드를 호출하면 각 객체의 메서드가 호출된다. (자식의 고유한 개성은 발현)
+ */
 public abstract class Employee {
 	protected String empno;		// 사번
 	protected String name;		// 이름
