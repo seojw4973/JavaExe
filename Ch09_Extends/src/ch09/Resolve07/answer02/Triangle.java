@@ -1,10 +1,10 @@
-package ch09.Resolve07;
+package ch09.Resolve07.answer02;
 
 public class Triangle {
 	Triangle(){}
 	private int width, height;
 	
-	Triangle(int width, int height){
+	public Triangle(int width, int height){
 		this.width = width;
 		this.height = height;
 	}
