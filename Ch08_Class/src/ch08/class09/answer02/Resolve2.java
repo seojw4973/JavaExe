@@ -1,10 +1,11 @@
-package ch08.class09;
+package ch08.class09.answer02;
 
 import java.util.Scanner;
 
 // 2. 중화요리집을 임의대로 클래스로 만드세요
+// 클래스 7번과 같이 해볼것
 public class Resolve2 {
-	private String [] foods = {"짜장면", "짬뽕", "탕수육", "볶음밥", "간짜장", "깐풍기"};
+	public String [] foods = {"짜장면", "짬뽕", "탕수육", "볶음밥", "간짜장", "깐풍기"};
 	private int selNum;
 	Scanner sc = new Scanner(System.in);
 	

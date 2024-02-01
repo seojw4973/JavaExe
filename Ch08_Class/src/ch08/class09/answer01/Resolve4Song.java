@@ -1,4 +1,4 @@
-package ch08.class09;
+package ch08.class09.answer01;
 
 public class Resolve4Song {
 	private String title;
@@ -45,44 +45,4 @@ public class Resolve4Song {
 	public int getSongInfo5() {	
 		return track;
 	}
-//	public void setTitle(String _title) {
-//		_title = title;
-//	}
-//	public void setArtist(String _artist) {
-//		_artist = artist;
-//	}
-//	public void setAlbum(String _album) {
-//		_album = album;
-//	}
-//	public void setComposer(String _composer) {
-//		_composer = composer;
-//	}
-//	public void setYear(int _year) {
-//		_year = year;
-//	}
-//	public void settrack(int _track) {
-//		_track = track;
-//	}
-//	
-//	public String getTitle() {
-//		return title;
-//	}
-//	public String getArtist() {
-//		return artist;
-//	}
-//	public String getAlbum() {
-//		return album;
-//	}
-//	public String getComposer() {
-//		return composer;
-//	}
-//	public int getYear() {
-//		return year;
-//	}
-//	public int getTrack() {
-//		return track;
-//	}
-	
-	
-	
 }

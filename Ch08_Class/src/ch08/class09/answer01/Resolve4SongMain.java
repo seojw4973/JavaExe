@@ -1,4 +1,4 @@
-package ch08.class09;
+package ch08.class09.answer01;
 
 public class Resolve4SongMain {
 	public static void show(Resolve4Song dancingQueen) {
@@ -21,6 +21,9 @@ public class Resolve4SongMain {
 		
 		show(dancingQueen);
 	}
+	
+	
 }
+
 
 

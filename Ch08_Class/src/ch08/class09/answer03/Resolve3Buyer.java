@@ -1,7 +1,8 @@
-package ch08.class09;
+package ch08.class09.answer03;
 
-
+// 문제 1번과 동일하게 해도 무관
 public class Resolve3Buyer {
+	// 필드 생성
 	private int buyMoney;
 	final int PEAR_PRICE = 2500; 
 	

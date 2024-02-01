@@ -1,4 +1,4 @@
-package ch08.class09;
+package ch08.class09.answer01;
 
 public class Reslove1Buyer {
 	private int buyMoney;

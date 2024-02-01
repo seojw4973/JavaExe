@@ -2,6 +2,13 @@ package ch08.class09;
 
 import java.util.Scanner;
 
+import ch08.class09.answer01.Reslove1Buyer;
+import ch08.class09.answer01.Resolve1Seller;
+import ch08.class09.answer02.Resolve2;
+import ch08.class09.answer03.Resolve3Buyer;
+import ch08.class09.answer04.Song;
+import ch08.class09.answer05.Rectangle;
+
 
 /*
 1.FruitMain클래스에		
@@ -79,6 +86,7 @@ public class QuestionClass {
 			+ "   int square() : 사각형 넓이 리턴\r\n"
 			+ "   void show() : 좌표와 넓이 등 직사각형 정보의 화면 출력\r\n"
 			+ "   boolean equals(Rectangle r) : 인자로 전달된 객체 r과 현 객체가 동일한 좌표의 직사각형이면 true 리턴\r\n"
+			+ "6. Program End~\r\n"
 			+ "";
 	
 	System.out.println("\n\n\n------------------------------------");
@@ -100,27 +108,67 @@ public static int getSelectMenu(Scanner sc) {
 
 // 1번 문제에 대한 풀이
 public static void answer1(Scanner sc) {
-
+	Resolve1Seller seller = new Resolve1Seller(20);
+	Reslove1Buyer buyer = new Reslove1Buyer(10000);
+	
+	seller.showSaleResult();
+	buyer.showBuyResult();
+	
+	seller.saleApple(buyer, 2000);
+	
+	seller.showSaleResult();
+	buyer.showBuyResult();
 }
 
 // 2번 문제에 대한 풀이
 public static void answer2(Scanner sc) {
-
+	Resolve2 resl = new Resolve2();
+	System.out.println("홍콩반점에 오신걸 환영합니다~");
+	resl.viewMenu();
+	resl.selectMenu();
+	resl.deliveryMenu();
+	resl.keyboardEnd();
 }
 
 // 3번 문제에 대한 풀이
 public static void answer3(Scanner sc) {
-
+	Resolve3Buyer resl = new Resolve3Buyer();
+	resl.dep();
+	resl.cal();
+	resl.keyboareEnd();
 }
 
 // 4번 문제에 대한 풀이
 public static void answer4(Scanner sc) {
-
+	Song song = new Song();
+	song.setSongInfo("Dancing Queen", "ABBA", "NOW 100 Hits Party", "ABBA", 1976, 2);
+	song.show();
 }
 
 // 5번 문제에 대한 풀이
 public static void answer5(Scanner sc) {
-
+	Rectangle rc0 = new Rectangle();
+	rc0.set(10, 10, 30, 30);
+	
+	Rectangle rc1 = new Rectangle();
+	rc1.set(10, 10, 30, 30);
+	
+	Rectangle rc2 = new Rectangle();
+	rc2.set(20, 20, 50, 50);
+	
+	rc0.show();
+	rc1.show();
+	rc2.show();
+	
+	if(rc0.equals(rc1))
+		System.out.println("rc0와 rc1은 같습니다.");
+	else
+		System.out.println("rc0와 rc1은 다릅니다.");
+	if(rc0.equals(rc2))
+		System.out.println("rc0와 rc2은 같습니다.");
+	else
+		System.out.println("rc0와 rc2은 다릅니다.");
+	
 }
 
 // 전체의 시작인 main 메서드
@@ -160,7 +208,8 @@ public static void main(String[] args) {
 		default:
 			System.out.println("번호를 잘 못 입력했습니다.");
 			break;
-		}			
+		}	
+		sc.nextLine();
 	}
 
 	System.out.println("Program End~");
