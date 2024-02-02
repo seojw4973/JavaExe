@@ -24,7 +24,7 @@ public class CarTester {
 		car.turnOn();
 		car.turnOff();
 		}
-		return (int)Math.random()*50 + 50;	//50~99 사이 값 리턴
+		return (int)(Math.random()*50) + 50;	//50~99 사이 값 리턴
 	}
 	public int speedTest() throws InterruptedException {
 		for(int i=0;i<TEST_NUM;i++) {
@@ -32,7 +32,7 @@ public class CarTester {
 			car.accel();
 			car.accel();
 		}
-		return (int)Math.random()*50 + 50;
+		return (int)(Math.random()*50) + 50;
 	}
 	public int footBreakTest() throws InterruptedException {
 		for(int i=0;i<TEST_NUM;i++) {
@@ -41,7 +41,7 @@ public class CarTester {
 			car.footBreak();
 			car.footBreak();
 		}
-		return (int)Math.random()*50 + 50;
+		return (int)(Math.random()*50) + 50;
 	}
 	public int driveTest() throws InterruptedException {
 		for(int i=0;i<TEST_NUM;i++) {
@@ -53,6 +53,6 @@ public class CarTester {
 			car.footBreak();
 			car.turnOff();
 		}
-		return (int)Math.random()*50 + 50;
+		return (int)(Math.random()*50) + 50;
 	}
 }
