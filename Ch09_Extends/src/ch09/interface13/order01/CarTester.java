@@ -12,6 +12,9 @@ public class CarTester {
 	public CarTester(ICar car) {
 		this.car = car;
 	}
+	public CarTester() {
+		
+	}
 
 	public void setCar(ICar car) {
 		this.car = car;
