@@ -24,7 +24,7 @@ public class PartTimeEmployee extends Employee {
 		super.showEmployeeInfo();
 		System.out.println("일당 : " + daliyPay);
 		System.out.println("일한 일수 : " + workDay);
-		System.out.println("월급 : " + getMonthPay());
+		System.out.printf("월급 : %.2f \n", getMonthPay());
 	}
 	
 

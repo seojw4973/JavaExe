@@ -24,7 +24,7 @@ public class TempEmployee extends Employee {
 		super.showEmployeeInfo();
 		System.out.println("연봉 : " + yearSalary);
 		System.out.println("계약기간 : " + hireYear);
-		System.out.println("월급 : " + getMonthPay());
+		System.out.printf("월급 : %.2f \n", getMonthPay());
 	}
 	
 
