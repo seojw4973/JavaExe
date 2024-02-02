@@ -12,5 +12,8 @@ public interface EmpMenu {
 	int TEMP_EMP = 2;
 	int PART_EMP = 3;
 	int ALL_INFO = 4;
-	int EXIT = 5;
+	int REG_INFO = 5;
+	int TEMP_INFO = 6;
+	int PART_INFO = 7;
+	int EXIT = 8;
 }
