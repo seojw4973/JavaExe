@@ -25,7 +25,7 @@ public class HyundaiCar implements ICar {
 	@Override
 	public void footBreak() throws InterruptedException {
 		System.out.println("HyundaiCar - 브레이크가 부드럽게 동작된다~H");
-		Thread.sleep((long)(Math.random()*500)+500);
+		Thread.sleep((long) (Math.random() * 500)+500);
 	}
 
 }
