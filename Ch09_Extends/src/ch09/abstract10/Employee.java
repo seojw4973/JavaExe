@@ -14,8 +14,8 @@ public abstract class Employee {
 	}
 	public void showEmployeeInfo() {
 		System.out.println("-------------------");
-		System.out.println("empno : " + empno);
-		System.out.println("name : " + name);
+		System.out.println("사번 : " + empno);
+		System.out.println("이름 : " + name);
 	}
 	public abstract double getMonthPay();	// 추상메서드
 }
