@@ -1,6 +1,6 @@
 package ch09.resolve14.problem1;
 
-public class InkJetPrint extends IPrint {
+public class InkJetPrint extends Printer {
 
 	protected int leaveInk;
 	
@@ -17,11 +17,13 @@ public class InkJetPrint extends IPrint {
 		
 	// 호출할 때마다 인쇄용지 -1 필요
 	@Override
-	public int print() {
-		leaveNum--;
-		this.leaveNum = leaveNum;
-		System.out.println("인쇄용지 잔량 : " + leaveNum);
-		return leaveNum;
+	public void printDocument() {
+		if(leaveInk>0) {
+		super.printDocument();
+		leaveInk--;
+		}else {
+			System.out.println("잉크가 모자랍니다.");
+		}
 	}
 
 }

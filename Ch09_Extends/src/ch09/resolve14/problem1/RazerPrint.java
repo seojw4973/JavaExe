@@ -1,6 +1,6 @@
 package ch09.resolve14.problem1;
 
-public class RazerPrint extends IPrint {
+public class RazerPrint extends Printer {
 
 	protected int leaveToner;
 
@@ -16,11 +16,12 @@ public class RazerPrint extends IPrint {
 
 	// 호출할 때마다 인쇄용지 -1 필요
 	@Override
-	public int print() {
-		leaveNum--;
-		this.leaveNum = leaveNum;
-		System.out.println("인쇄용지 잔량 : " + leaveNum);
-		return leaveNum;
+	public void printDocument() {
+		if(leaveToner>0) {
+		super.printDocument();
+		leaveToner--;
+		}else {
+			System.out.println("토너가 모자랍니다.");
+		}
 	}
-
 }

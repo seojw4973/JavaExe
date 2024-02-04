@@ -1,30 +1,13 @@
 package ch09.resolve14.problem1;
 
-public abstract class IPrint {
+class Printer {
 	String model;
 	String maker;
 	String port;
 	int printNum;
 	int leaveNum;
 	
-	public void Model() {
-		
-	}
-	
-	public void Maker() {
-		
-	}
-	public void Port() {
-	
-	}
-	public void PrintNum() {
-	
-	}
-	public void LeaveNum() {
-	
-	}
-	
-	public IPrint(String model, String maker,
+	public Printer(String model, String maker,
 			String port, int printNum, int leaveNum) {
 		this.model = model;
 		this.maker = maker;
@@ -43,7 +26,15 @@ public abstract class IPrint {
 		
 	}
 
-	public abstract int print();
+	public void printDocument() {
+		if(leaveNum>0) {
+			System.out.println(model + " 모델을 이용해서 인쇄합니다.");
+			printNum++;
+			leaveNum--;
+		}else {
+			System.out.println("인쇄 용지가 모자랍니다.");
+		}
+	}
 
 	
 	
