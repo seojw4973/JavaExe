@@ -1,4 +1,4 @@
-package ch09.resolve14.question02.factory1;
+package ch09.resolve14.question02.factory01;
 
 import ch09.resolve14.question02.ITablet;
 
