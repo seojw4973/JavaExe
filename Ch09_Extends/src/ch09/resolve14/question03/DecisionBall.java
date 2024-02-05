@@ -1,40 +1,32 @@
 package ch09.resolve14.question03;
 
-import java.util.Scanner;
-
-public class DecisionBall extends BaseBall {
-	Scanner sc = new Scanner(System.in);
-
-	public void inputNum() {
-		for (int i = 0; i < numArr.length;i++) {
-			inputArr[i] = sc.nextInt();
-			for (int j = 0; j < i; j++) {
-				if (inputArr[j] == inputArr[i]) {
-					i--;
-					break;
-				}
-
-			}
-		}
-	}
-
-	public void decisionBall() {
-		for (int i = 0; i < numArr.length; i++) {
-			for (int j = 0; j < inputArr.length; j++) {
-				if (numArr[i] == inputArr[j] && i == j) {
-					strike++;
-				} else if (numArr[i] == inputArr[j] || i == j) {
-					ball++;
+// 스트라이크, 볼 판단하는 역할
+// 기능만 제공해주는 경우 메서드를 static으로 만드는게 좋음
+public class DecisionBall {
+	public static boolean decisionBall(int[] comArr, int[] userArr) {
+		boolean isGameRun = true;
+		String result = "";
+		
+		int strike = 0, ball = 0;
+		for(int i=0;i<comArr.length;i++) {
+			for(int j=0;j<userArr.length;j++) {
+				// 숫자가 일치하는 것이 나왔다
+				if(comArr[i] == userArr[j]) {
+					if(i==j) // 자리까지 위치하면 strike
+						strike++;
+					else	 // 자리가 다르면 ball
+						ball++;
 				}
 			}
-	System.out.println(strike+"스트라이크"+ball+"볼");
-	if(strike==3) {
-    	System.out.println("정답!");
-           	break;
-	}
-	strike=0;ball=0;
-	sc.close();
 		}
+		
+		if(strike == 3)
+			isGameRun = false;
+		
+		result = "strike = " + strike +  ", ball = " + ball;
+		System.out.println(result);
+		
+		return isGameRun;
 	}
 
 }

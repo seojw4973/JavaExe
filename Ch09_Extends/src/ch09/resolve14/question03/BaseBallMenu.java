@@ -1,8 +1,23 @@
 package ch09.resolve14.question03;
 
+import java.util.Scanner;
+
+// 메뉴를 담당하는 역할
+
 public interface BaseBallMenu {
-	int FIRST_NUM = 1;
-	int SECOND_NUM = 2;
-	int THIRD_NUM = 3;
-	int RESULT = 4;
+	static Scanner sc = new Scanner(System.in);
+	
+	public static void printOrder(int order) {
+		System.out.println(order + "번째 숫자 입력 >> ");
+		
+	}
+	
+	public static int getUserNum() {
+		int num = sc.nextInt();
+		return num;
+	}
+	
+	public static void endInput() {
+		sc.close();
+	}
 }
