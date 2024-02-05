@@ -2,6 +2,9 @@ package ch09.resolve14;
 
 import java.util.Scanner;
 
+import ch09.resolve14.question01.InkJetPrint;
+import ch09.resolve14.question01.RazerPrint;
+
 public class Answer1 implements IQuestionAnswer {
 
 	@Override
@@ -24,8 +27,28 @@ public class Answer1 implements IQuestionAnswer {
 	@Override
 	public void answer(Scanner sc) {
 		sc.nextLine();		// Enter치기 전까지 멈춰있음
-		System.out.println("1번 문제 실행~");
-		sc.nextLine();
+		InkJetPrint inkJetPrint = new InkJetPrint("HP-264", "HP", "USB", 0, 4, 20);
+		RazerPrint razerPrint = new RazerPrint("Samsung-111", "Samsung", "paraller port", 0, 30, 100);
+		
+		inkJetPrint.showPrinterInfo();
+		razerPrint.showPrinterInfo();
+		
+		for(int i=0;i<5;i++) {
+			inkJetPrint.printDocument();
+		}
+		
+		System.out.println();
+		
+		for(int i=0;i<1;i++) {
+			razerPrint.printDocument();
+		}
+		
+		System.out.println();
+		
+		inkJetPrint.showPrinterInfo();
+		razerPrint.showPrinterInfo();
+		
+			sc.nextLine();
 	}
 
 	@Override

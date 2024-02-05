@@ -1,4 +1,4 @@
-package ch09.resolve14.problem3;
+package ch09.resolve14.question03;
 
 /* 0~9사이의 숫자를 랜덤으로 뽑아서
  * 그것을 배열에 저장

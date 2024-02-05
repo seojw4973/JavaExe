@@ -1,6 +1,6 @@
-package ch09.resolve14.problem2.factory1;
+package ch09.resolve14.question02.factory1;
 
-import ch09.resolve14.problem2.ITablet;
+import ch09.resolve14.question02.ITablet;
 
 public class SonyTablet implements ITablet {
 

@@ -1,4 +1,4 @@
-package ch09.resolve14.problem3;
+package ch09.resolve14.question03;
 
 public interface BaseBallMenu {
 	int FIRST_NUM = 1;

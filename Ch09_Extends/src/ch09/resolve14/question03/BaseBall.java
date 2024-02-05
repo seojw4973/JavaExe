@@ -1,4 +1,4 @@
-package ch09.resolve14.problem3;
+package ch09.resolve14.question03;
 
 import java.util.Random;
 import java.util.Scanner;

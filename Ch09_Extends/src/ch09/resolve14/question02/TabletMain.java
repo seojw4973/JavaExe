@@ -1,9 +1,9 @@
-package ch09.resolve14.problem2;
+package ch09.resolve14.question02;
 
-import ch09.resolve14.problem2.factory1.LgTablet;
-import ch09.resolve14.problem2.factory1.SamsungTablet;
-import ch09.resolve14.problem2.factory1.SonyTablet;
-import ch09.resolve14.problem2.order1.TabletTester;
+import ch09.resolve14.question02.factory1.LgTablet;
+import ch09.resolve14.question02.factory1.SamsungTablet;
+import ch09.resolve14.question02.factory1.SonyTablet;
+import ch09.resolve14.question02.order1.TabletTester;
 
 /*
 [시나리오]

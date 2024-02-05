@@ -1,4 +1,4 @@
-package ch09.resolve14.problem3;
+package ch09.resolve14.question03;
 
 //3. 삼진아웃게임을 만듭니다
 //두 사람중에 한 사람이 0~9까지 3개의 숫자중 중복없이 임의의 숫자를 선택합니다

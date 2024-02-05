@@ -1,14 +1,21 @@
-package ch09.resolve14.problem1;
+package ch09.resolve14.question01;
 
 public class RazerPrint extends Printer {
 
-	protected int leaveToner;
+	protected double leaveToner;
 
 	public RazerPrint(String model, String maker,
-			String port, int printNum, int leaveNum, int leaveToner) {
+			String port, int printNum, int leaveNum, double leaveToner) {
 		super(model, maker, port, printNum, leaveNum);
 		this.leaveToner = leaveToner;
 	}
+	
+//	@Override
+//	public String toString() {
+//		return "RazerPrint [leaveToner=" + leaveToner + ", model=" + model + ", maker=" + maker + ", port=" + port
+//				+ ", printNum=" + printNum + ", leaveNum=" + leaveNum + "]";
+//	}
+
 	public void showPrinterInfo() {
 		super.showPrinterInfo();
 		System.out.println("토너 잔량 : " + leaveToner);
@@ -19,7 +26,9 @@ public class RazerPrint extends Printer {
 	public void printDocument() {
 		if(leaveToner>0) {
 		super.printDocument();
-		leaveToner--;
+		System.out.println("빠르게 출력된다.");
+		System.out.println("품질이 매우 양호하다");
+		this.leaveToner *= 0.9;
 		}else {
 			System.out.println("토너가 모자랍니다.");
 		}

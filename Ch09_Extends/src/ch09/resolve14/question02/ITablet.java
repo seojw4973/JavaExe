@@ -1,4 +1,4 @@
-package ch09.resolve14.problem2;
+package ch09.resolve14.question02;
 
 public interface ITablet {
 	public void movie() throws InterruptedException;

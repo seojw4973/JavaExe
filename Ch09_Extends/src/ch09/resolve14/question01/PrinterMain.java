@@ -1,4 +1,4 @@
-package ch09.resolve14.problem1;
+package ch09.resolve14.question01;
 
 public class PrinterMain {
 

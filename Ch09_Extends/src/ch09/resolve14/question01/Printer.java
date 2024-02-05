@@ -1,11 +1,11 @@
-package ch09.resolve14.problem1;
+package ch09.resolve14.question01;
 
-class Printer {
-	String model;
-	String maker;
-	String port;
-	int printNum;
-	int leaveNum;
+public class Printer {
+	protected String model;
+	protected String maker;
+	protected String port;
+	protected int printNum;
+	protected int leaveNum;
 	
 	public Printer(String model, String maker,
 			String port, int printNum, int leaveNum) {
