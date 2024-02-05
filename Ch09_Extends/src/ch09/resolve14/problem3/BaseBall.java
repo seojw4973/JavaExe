@@ -26,6 +26,8 @@ public class BaseBall {
 		System.out.println("세 번째 숫자 입력 >> ");
 		int sel = sc.nextInt();
 		return sel;
+	
+		
 	}
 
 
@@ -35,15 +37,4 @@ public class BaseBall {
 
 
 
-
-
-
-
-
-
-
-
-
-
-sc.close();
 }

@@ -5,8 +5,8 @@ import java.util.Scanner;
 public class DecisionBall extends BaseBall {
 	Scanner sc = new Scanner(System.in);
 
-	public void selNum() {
-		for (int i = 0; i < numArr.length;) {
+	public void inputNum() {
+		for (int i = 0; i < numArr.length;i++) {
 			inputArr[i] = sc.nextInt();
 			for (int j = 0; j < i; j++) {
 				if (inputArr[j] == inputArr[i]) {

@@ -43,5 +43,17 @@ package ch09.resolve14.problem3;
 //다시하시겠습니까(Y/N)?
 
 public class BaseBallMain {
-
+	GeneratorThreeNum generate = new GeneratorThreeNum();
+	DecisionBall decision = new DecisionBall();
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }
