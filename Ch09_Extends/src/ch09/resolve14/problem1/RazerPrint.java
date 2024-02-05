@@ -9,8 +9,8 @@ public class RazerPrint extends Printer {
 		super(model, maker, port, printNum, leaveNum);
 		this.leaveToner = leaveToner;
 	}
-	public void showPrintInfo() {
-		super.showPrintInfo();
+	public void showPrinterInfo() {
+		super.showPrinterInfo();
 		System.out.println("토너 잔량 : " + leaveToner);
 	}
 

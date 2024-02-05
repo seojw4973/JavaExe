@@ -10,8 +10,8 @@ public class InkJetPrint extends Printer {
 		this.leaveInk = leaveInk;
 	}
 	
-	public void showPrintInfo() {
-		super.showPrintInfo();
+	public void showPrinterInfo() {
+		super.showPrinterInfo();
 		System.out.println("잉크 잔량 : " + leaveInk);
 	}
 		

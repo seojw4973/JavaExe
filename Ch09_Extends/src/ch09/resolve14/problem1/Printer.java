@@ -16,7 +16,7 @@ class Printer {
 		this.leaveNum = leaveNum;
 	}
 	
-	public void showPrintInfo() {
+	public void showPrinterInfo() {
 		System.out.println("-------------------");
 		System.out.println("모델명 : " + model);
 		System.out.println("제조사 : " + maker);
