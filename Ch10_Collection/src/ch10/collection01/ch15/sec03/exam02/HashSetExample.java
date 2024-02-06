@@ -9,7 +9,7 @@ public class HashSetExample {
 		
 		// Member 객체 저장
 		set.add(new Member("홍길동", 30));
-		set.add(new Member("홍길동", 30));
+		set.add(new Member("홍길동", 30));	// 내부에서 hashCode() -> equals() 비교 ~ 저장되지 않음
 		
 		// 저장된 객체 수 출력
 		System.out.println("총 객체 수 : " + set.size());
