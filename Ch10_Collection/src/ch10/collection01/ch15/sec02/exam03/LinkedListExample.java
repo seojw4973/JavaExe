@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
+/* 사용방법은 List구조이기 때문에 ArrayList와 동일
+ * 데이터가 빈번하게 삽입삭제가 이루어질 경우 사용하기에 용이함
+ * */
 public class LinkedListExample {
 	public static void main(String[] args) {
 		// ArrayList 컬렉션 객체 생성
