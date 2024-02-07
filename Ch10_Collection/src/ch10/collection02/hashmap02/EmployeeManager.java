@@ -1,11 +1,17 @@
 package ch10.collection02.hashmap02;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
 public class EmployeeManager {
 	private final int EMP_NUM = 100; // 100명의 사원이 최대
 	// Employee의 자식 객체들을 저장
 	private Employee[] empArr = new Employee[EMP_NUM];
+	Map<Integer, String> empMap = new HashMap<Employee>();
+	for (int i = 0; i < empArr.length; i++) {
+	    map.put(i, empArr[i]);
+	}
 	private int numOfEmp = 0; // 저장된 사원객체 수, 다음 사원이 저장될 index
 	private Scanner sc = new Scanner(System.in);
 
