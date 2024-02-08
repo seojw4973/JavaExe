@@ -1,19 +1,11 @@
 package ch10.collection02.linkedlist03;
 
-//3. linkedlist02 패키지 아래의 클래스들을
-//LinkedList로 변환된 클래스를
-//사번으로 검색/수정/삭제 기능을 추가하세요
-
-import java.util.Arrays;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Scanner;
 
 public class EmployeeManager {
-	private final int EMP_NUM = 100; // 100명의 사원이 최대
-	// Employee의 자식 객체들을 저장
-	Employee[] empArr = new Employee[EMP_NUM];
-	LinkedList<Employee> empList = new LinkedList<Employee>(Arrays.asList(empArr));
-	private int numOfEmp = 0; // 저장된 사원객체 수, 다음 사원이 저장될 index
+	private List<Employee> empList = new LinkedList<>();
 	private Scanner sc = new Scanner(System.in);
 
 	private int viewMenu() {
@@ -25,7 +17,10 @@ public class EmployeeManager {
 		System.out.println("5. 정규직 보기");
 		System.out.println("6. 임시직 보기");
 		System.out.println("7. 일용직 보기");
-		System.out.println("8. 종료");
+		System.out.println("8. 사번 검색");
+		System.out.println("9. 사번 삭제");
+		System.out.println("10. 사번 수정");
+		System.out.println("11. 종료");
 		System.out.println("번호 입력 >> ");
 		int sel = sc.nextInt();
 		return sel;
@@ -70,62 +65,91 @@ public class EmployeeManager {
 		return emp;
 	}
 
-	private boolean saveEmployee(Employee emp) {
-		boolean isSave = true;
-
-		if (this.numOfEmp < EMP_NUM) {
-			empList.add(this.numOfEmp, emp);
-			this.numOfEmp++;
-			isSave = true;
-		} else {
-			isSave = false;
+	private boolean saveEmployee(Employee newEmp) {
+		boolean isSave = false;
+		for(int i=0;i<empList.size();i++) {
+			Employee emp = empList.get(i);
+			if(emp.empno.equals(newEmp.empno)) {
+				System.out.println(emp.empno + " 사번을 갱신합니다.");
+				empList.remove(i);
+				empList.add(i, newEmp);
+				isSave = true;
+				break;
+			}
 		}
-		return true;
+		
+		if(!isSave) {
+			System.out.println("새로운 사원을 추가합니다~");
+			isSave = empList.add(newEmp);
+		}
+			
+		return isSave;
 	}
 
 	private void viewAllEmployeeInfo() {
-		for (int i = 0; i < this.numOfEmp; i++) {
+		for (int i = 0; i < empList.size(); i++) {
 			this.empList.get(i).showEmployeeInfo();
 		}
 	}
 
 	private void viewRegEmployeeInfo() {
-		for (int i = 0; i < this.numOfEmp; i++) {
+		for (int i = 0; i < empList.size(); i++) {
 			Employee emp = this.empList.get(i);
 			if (emp instanceof RegularEmployee) {
-				this.empList.get(i).showEmployeeInfo();;
+				emp.showEmployeeInfo();;
 			}
 		}
 	}
 
 	private void viewTempEmployeeInfo() {
-		for (int i = 0; i < this.numOfEmp; i++) {
+		for (int i = 0; i < empList.size(); i++) {
 			Employee emp = this.empList.get(i);
 			if (emp instanceof TempEmployee) {
-				this.empList.get(i).showEmployeeInfo();
+				emp.showEmployeeInfo();
 			}
 		}
 	}
 
 	private void viewPartEmployeeInfo() {
-		for (int i = 0; i < this.numOfEmp; i++) {
+		for (int i = 0; i < empList.size(); i++) {
 			Employee emp = this.empList.get(i);
 			if (emp instanceof RegularEmployee) {
-				this.empList.get(i).showEmployeeInfo();
+				emp.showEmployeeInfo();
 			}
 		}
 	}
+	private String getEmpNo() {
+		System.out.println("사번 입력 >> ");
+		String empNo = sc.next();
+		return empNo;
+	}
 	
-	private void searchEmpNo() {
+	private void searchEmpolyee(String empno) {
 		// Linkedlist를 통해 사번을 입력하면 사번 대상자의 정보가 나오게 코딩
+		for(int i=0; i<empList.size();i++) {
+			Employee emp = empList.get(i);
+			if(emp.empno.equals(empno)) {
+				emp.showEmployeeInfo();
+			}
+		}
 	}
-	
-	private void modifyEmpNo() {
-		// Linkedlist를 통해 사번을 입력하면 수정할 수 있도록 코딩
-	}
-	
-	private void removeEmpNo() {
+		
+	private void removeEmpNo(String empno) {
 		// Linkedlist를 통해 사번을 입력하면 삭제할수 있도록 코딩
+		for(int i=0; i<empList.size();i++) {
+			Employee emp = empList.get(i);
+			if(emp.empno.equals(empno)) {
+				empList.remove(i);
+				System.out.println("인덱스 " + i + "를 삭제했습니다.");
+			}
+		}
+	}
+	private void modifyEmpNo() {
+		// 위에 사번정보 입력에서 갱신하는 시스템을 넣어놨기때문에 첨으로 돌아가도록 안내해주면됨
+		System.out.println("Main Menu에서 사번과 정보를 입력하시면 새로 갱신됩니다~");
+		sc.nextLine();
+		sc.nextLine();
+		
 	}
 
 	public void run() {
@@ -159,6 +183,18 @@ public class EmployeeManager {
 			case EmpMenu.PART_INFO:
 				emp = null;
 				viewPartEmployeeInfo();
+				break;
+			case EmpMenu.EMPNO_SEARCH:
+				emp = null;
+				searchEmpolyee(getEmpNo());
+				break;
+			case EmpMenu.EMPNO_DELETE:
+				emp = null;
+				removeEmpNo(getEmpNo());
+				break;
+			case EmpMenu.EMPNO_MODIFY:
+				emp = null;
+				modifyEmpNo();
 				break;
 			case EmpMenu.EXIT:
 				emp = null;

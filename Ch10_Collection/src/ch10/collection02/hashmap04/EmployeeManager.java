@@ -1,4 +1,4 @@
-package ch10.collection02.hashmap02;
+package ch10.collection02.hashmap04;
 
 import java.util.HashMap;
 import java.util.Iterator;
@@ -19,7 +19,10 @@ public class EmployeeManager {
 		System.out.println("5. 정규직 보기");
 		System.out.println("6. 임시직 보기");
 		System.out.println("7. 일용직 보기");
-		System.out.println("8. 종료");
+		System.out.println("8. 사번 검색");
+		System.out.println("9. 사번 삭제");
+		System.out.println("10. 사번 수정");
+		System.out.println("11. 종료");
 		System.out.println("번호 입력 >> ");
 		int sel = sc.nextInt();
 		return sel;
@@ -132,6 +135,28 @@ public class EmployeeManager {
 				}
 		}
 	}
+		private String getEmpNo() {
+			System.out.print("사번 입력 >> ");
+			String empNo = sc.next();
+			return empNo;
+		}
+		private void searchEmployee(String empno) {
+			Employee emp = empMap.get(empno);
+			if(emp!=null) {
+				emp.showEmployeeInfo();
+			}
+		}
+		private void deleteEmployee(String empno) {
+			Employee emp = empMap.get(empno);
+			if(emp!=null) {
+				empMap.remove(empno);
+			}
+		}
+		private void modifyEmployee() {
+			System.out.println("Main Menu에서 사번과 정보를 입력하시면 새로 갱신됩니다~");
+			sc.nextLine();
+			sc.nextLine();	
+	}
 
 	public void run() {
 		boolean isRun = true;
@@ -164,6 +189,18 @@ public class EmployeeManager {
 			case EmpMenu.PART_INFO:
 				emp = null;
 				viewPartEmployeeInfo();
+				break;
+			case EmpMenu.EMPNO_SEARCH:
+				emp = null;
+				searchEmployee(getEmpNo());
+				break;
+			case EmpMenu.EMPNO_DELETE:
+				emp = null;
+				deleteEmployee(getEmpNo());
+				break;
+			case EmpMenu.EMPNO_MODIFY:
+				emp = null;
+				modifyEmployee();
 				break;
 			case EmpMenu.EXIT:
 				emp = null;

@@ -1,4 +1,4 @@
-package ch10.collection02.linkedlist03;
+package ch10.collection02.hashmap04;
 
 //System.out.println("[ 사원 선택 ]");
 //System.out.println("1. 정규직");
@@ -18,5 +18,5 @@ public interface EmpMenu {
 	public int EMPNO_SEARCH = 8;
 	public int EMPNO_DELETE = 9;
 	public int EMPNO_MODIFY = 10;
-	int EXIT = 11;
+	public int EXIT = 11;
 }
