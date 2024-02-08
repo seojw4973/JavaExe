@@ -1,7 +1,7 @@
 package ch13.generic.ch13.sec05;
 
 public class Course {
-	// 모든 사람이면 등록 가능
+	// 모든 사람이면 등록 가능							T를 써주는 것과 동일한 효과
 	public static void registerCourse1(Applicant<?> applicant) {
 		System.out.println(applicant.kind.getClass().getSimpleName() + "이(가) Course1을 등록함");
 	}
