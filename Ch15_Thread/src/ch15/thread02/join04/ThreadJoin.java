@@ -1,6 +1,6 @@
-package ch15.thread02;
+package ch15.thread02.join04;
 
-public class ThreadSleep {
+public class ThreadJoin {
 	public static void main(String[] args) {
 
 		
@@ -26,7 +26,10 @@ public class ThreadSleep {
 		t1.start();
 		
 		try {
-			Thread.sleep(1100);
+			// VM내의 스레드 종료 신호를 기다리고있다.
+			// run()이 리턴되면 스레드는 종료 신호를 VM에 보낸다.
+			// 종료 신호(Signal)가 오면 join()은 리턴한다.
+			t1.join();
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
