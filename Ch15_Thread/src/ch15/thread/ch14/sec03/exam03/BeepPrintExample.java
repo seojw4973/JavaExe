@@ -4,6 +4,7 @@ import java.awt.Toolkit;
 
 public class BeepPrintExample {
 	public static void main(String[] args) {
+		// main스레드(주인아저씨)가 work스레드(알바생)을 고용한다
 		Thread thread = new Thread() {
 			@Override
 			public void run() {
