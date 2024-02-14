@@ -12,6 +12,11 @@ public class Car {
 		}
 	};
 	
+	public void TireInfo() {
+		System.out.println(tire1);
+		System.out.println(tire2);
+	}
+	
 	// 메서드(필드 이용)
 	public void run1() {
 		tire1.roll();
