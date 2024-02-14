@@ -29,7 +29,7 @@
 //		});
 //		
 //		// Cancel 버튼 클릭하기
-//		btnOk.click();
+//		btnCancel.click();
 //	}
 //}
 
