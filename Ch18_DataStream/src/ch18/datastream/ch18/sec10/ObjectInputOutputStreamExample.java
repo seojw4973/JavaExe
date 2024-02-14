@@ -17,7 +17,7 @@ public class ObjectInputOutputStreamExample {
 		Product p1 = new Product("노트북", 1500000);
 		int[] arr1 = { 1, 2, 3};
 		
-		// 객체를 역직렬화해서 파일에 저장
+		// 객체를 직렬화해서 파일에 저장
 		oos.writeObject(m1);
 		oos.writeObject(p1);
 		oos.writeObject(arr1);
