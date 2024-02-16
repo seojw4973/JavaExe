@@ -77,13 +77,13 @@ public class JsonChatClient {
 	}
 	public static void sendAllChat(Scanner sc, PrintWriter pw, String id) {
 		boolean isRun = true;
-		String msg = sc.nextLine();
+		
 		while(isRun) {
 			System.out.println("전송 메시지 (quit는 종료) >> ");
-			
-			if(msg.equals("quit"))
+			String msg = sc.nextLine();
+			if(msg.equals("quit")) {
 				isRun = false;
-			break;
+				break;
 			}
 			
 			JSONObject packetObj = new JSONObject();
@@ -97,7 +97,7 @@ public class JsonChatClient {
 			pw.flush();
 		
 		}
-		
+	}	
 	
 	public static void sendArith(Scanner sc, PrintWriter pw, String id) {
 		System.out.println("연산자 입력(+ - * / ) >>");

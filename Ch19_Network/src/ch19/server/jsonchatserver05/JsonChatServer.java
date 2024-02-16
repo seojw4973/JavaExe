@@ -86,7 +86,7 @@ class WorkerThread extends Thread {
 	public void run() {
 		try {
 			InetAddress inetAddr = socket.getInetAddress();
-			System.out.printf("<서버-%s> %s로부터 접속했습니다.\r\n", getName(), inetAddr.getHostAddress());
+			System.out.printf("<서버-%s> %s로부터 접속했습니다.\n", getName(), inetAddr.getHostAddress());
 			OutputStream out = socket.getOutputStream();
 			InputStream in = socket.getInputStream();
 			PrintWriter pw = new PrintWriter(new OutputStreamWriter(out));
@@ -97,11 +97,11 @@ class WorkerThread extends Thread {
 				String line = br.readLine();
 				if (line == null)
 					break;
-				/*
-				 * json 패킷을 해석해서 알맞은 처리를 한다. 문자열 -> JSONObject 변환 -> cmd를 해석해서 어떤 명령인지?
-				 */
+				/* json 패킷을 해석해서 알맞은 처리를 한다.
+				 * 문자열 -> JSONObject 변환 -> cmd를 해석해서 어떤 명령인지?
+				 * */
 				JSONObject packetObj = new JSONObject(line);
-				// 명령당 다른 처리
+				// 명령당 알맞은 처리를 해줌
 				processPacket(packetObj);
 
 			}
@@ -171,7 +171,7 @@ class WorkerThread extends Thread {
 			pw.println(ack);
 			pw.flush();
 
-			// 전체 전송 패킷
+			// 특정 youid 사용 클라이언트에 전송 패킷
 			JSONObject broadObj = new JSONObject();
 			ackObj.put("cmd", "BROADCHAT");
 			ackObj.put("id", id);
@@ -199,7 +199,7 @@ class WorkerThread extends Thread {
 			pw.println(ack);
 			pw.flush();
 
-			// 특정 youid 사용 클라이언트에 전송 패킷
+			// 전송 패킷 구성
 			JSONObject uniObj = new JSONObject();
 			uniObj.put("cmd", "UNICHAT");
 			uniObj.put("id", id);
