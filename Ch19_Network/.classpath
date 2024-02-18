@@ -7,5 +7,6 @@
 	</classpathentry>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="lib" path="D:/Lecture/JavaExe/JavaExe/Ch19_Network/lib/json-20240205.jar"/>
+	<classpathentry kind="lib" path="lib/mysql-connector-java-8.0.25.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
